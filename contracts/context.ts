@@ -1,0 +1,7 @@
+declare module '@ioc:Adonis/Core/HttpContext' {
+  import { AuthContract } from '@ioc:Adonis/Addons/Auth'
+
+  interface HttpContextContract {
+    auth: AuthContract
+  }
+}
