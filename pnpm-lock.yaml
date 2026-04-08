@@ -17,6 +17,9 @@ importers:
       '@adonisjs/core':
         specifier: ^5.9.0
         version: 5.9.0
+      '@adonisjs/limiter':
+        specifier: 2.1.0
+        version: 2.1.0(@adonisjs/core@5.9.0)(@adonisjs/lucid@18.4.2(@adonisjs/application@5.3.0)(@adonisjs/core@5.9.0)(mysql2@3.20.0(@types/node@25.5.2)))
       '@adonisjs/lucid':
         specifier: ^18.4.2
         version: 18.4.2(@adonisjs/application@5.3.0)(@adonisjs/core@5.9.0)(mysql2@3.20.0(@types/node@25.5.2))
@@ -38,6 +41,9 @@ importers:
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
     devDependencies:
       '@adonisjs/assembler':
         specifier: 5.9.6
@@ -57,6 +63,9 @@ importers:
       '@types/source-map-support':
         specifier: ^0.5.10
         version: 0.5.10
+      '@types/uuid':
+        specifier: ^11.0.0
+        version: 11.0.0
       adonis-preset-ts:
         specifier: ^2.1.0
         version: 2.1.0
@@ -176,6 +185,18 @@ packages:
   '@adonisjs/ioc-transformer@2.3.4':
     resolution: {integrity: sha512-ik1C7f0Hbqenw6S1Ty06B4pznGfpUH5bL2fiCYgwq+jKPw8CKdsTQKvYudS6Tj68Nr6Mpqow4RNbvFV/OC0mZg==}
 
+  '@adonisjs/limiter@2.1.0':
+    resolution: {integrity: sha512-7ZYvpI3klw1XZKO088GlVcxkWPcdX0s/XIwj69CnRyXnqMMJQL7QPgGEKcZ1GKhKm/GXOXqTHLuxfpO+GCqNjQ==}
+    peerDependencies:
+      '@adonisjs/core': ^6.2.2
+      '@adonisjs/lucid': ^20.1.0
+      '@adonisjs/redis': ^8.0.1
+    peerDependenciesMeta:
+      '@adonisjs/lucid':
+        optional: true
+      '@adonisjs/redis':
+        optional: true
+
   '@adonisjs/logger@4.1.6':
     resolution: {integrity: sha512-lmnx/wGvxnlHLuUEWQ+VpUQuKBEKumdutNWZPythGP/VpBRzunypntDb7O9XfauPva6B6Z9WVjr2+v3ElTcKPQ==}
 
@@ -243,24 +264,24 @@ packages:
     resolution: {integrity: sha512-EriSTlt5OC9/7SXkRSCAhfSxxoSUgBm33OH+IkwbdpgoqsSsUg7y3uh+IICI/Qg4BBWr3U2i39RpmycbxMq4ew==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/config-array@0.23.4':
-    resolution: {integrity: sha512-lf19F24LSMfF8weXvW5QEtnLqW70u7kgit5e9PSx0MsHAFclGd1T9ynvWEMDT1w5J4Qt54tomGeAhdoAku1Xow==}
+  '@eslint/config-array@0.23.5':
+    resolution: {integrity: sha512-Y3kKLvC1dvTOT+oGlqNQ1XLqK6D1HU2YXPc52NmAlJZbMMWDzGYXMiPRJ8TYD39muD/OTjlZmNJ4ib7dvSrMBA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/config-helpers@0.5.4':
-    resolution: {integrity: sha512-jJhqiY3wPMlWWO3370M86CPJ7pt8GmEwSLglMfQhjXal07RCvhmU0as4IuUEW5SJeunfItiEetHmSxCCe9lDBg==}
+  '@eslint/config-helpers@0.5.5':
+    resolution: {integrity: sha512-eIJYKTCECbP/nsKaaruF6LW967mtbQbsw4JTtSVkUQc9MneSkbrgPJAbKl9nWr0ZeowV8BfsarBmPpBzGelA2w==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/core@1.2.0':
-    resolution: {integrity: sha512-8FTGbNzTvmSlc4cZBaShkC6YvFMG0riksYWRFKXztqVdXaQbcZLXlFbSpC05s70sGEsXAw0qwhx69JiW7hQS7A==}
+  '@eslint/core@1.2.1':
+    resolution: {integrity: sha512-MwcE1P+AZ4C6DWlpin/OmOA54mmIZ/+xZuJiQd4SyB29oAJjN30UW9wkKNptW2ctp4cEsvhlLY/CsQ1uoHDloQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/object-schema@3.0.4':
-    resolution: {integrity: sha512-55lO/7+Yp0ISKRP0PsPtNTeNGapXaO085aELZmWCVc5SH3jfrqpuU6YgOdIxMS99ZHkQN1cXKE+cdIqwww9ptw==}
+  '@eslint/object-schema@3.0.5':
+    resolution: {integrity: sha512-vqTaUEgxzm+YDSdElad6PiRoX4t8VGDjCtt05zn4nU810UIx/uNEV7/lZJ6KwFThKZOzOxzXy48da+No7HZaMw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/plugin-kit@0.7.0':
-    resolution: {integrity: sha512-ejvBr8MQCbVsWNZnCwDXjUKq40MDmHalq7cJ6e9s/qzTUFIIo/afzt1Vui9T97FM/V/pN4YsFVoed5NIa96RDg==}
+  '@eslint/plugin-kit@0.7.1':
+    resolution: {integrity: sha512-rZAP3aVgB9ds9KOeUSL+zZ21hPmo8dh6fnIFwRQj5EAZl9gzR7wxYbYXYysAM8CTqGmUGyp2S4kUdV17MnGuWQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@faker-js/faker@8.4.1':
@@ -525,6 +546,10 @@ packages:
 
   '@types/superagent@4.1.24':
     resolution: {integrity: sha512-mEafCgyKiMFin24SDzWN7yAADt4gt6YawFiNMp0QS5ZPboORfyxFt0s3VzJKhTaKg9py/4FUmrHLTNfJKt9Rbw==}
+
+  '@types/uuid@11.0.0':
+    resolution: {integrity: sha512-HVyk8nj2m+jcFRNazzqyVKiZezyhDKrGUA3jlEcg/nZ6Ms+qHwocba1Y/AaVaznJTAM9xpdFSh+ptbNrhOGvZA==}
+    deprecated: This is a stub types definition. uuid provides its own type definitions, so you do not need this installed.
 
   '@types/validator@13.15.10':
     resolution: {integrity: sha512-T8L6i7wCuyoK8A/ZeLYt1+q0ty3Zb9+qbSSvrIVitzT3YjZqkTZ40IbRsPanlB4h1QB3JVL1SYCdR6ngtFYcuA==}
@@ -1248,8 +1273,8 @@ packages:
   error-stack-parser-es@1.0.5:
     resolution: {integrity: sha512-5qucVt2XcuGMcEGgWI7i+yZpmpByQ8J1lHhcL7PwqCwu9FPP3VUXzT4ltHe5i2z9dePwEHcDVOAfSnHsOlCXRA==}
 
-  es-abstract@1.24.1:
-    resolution: {integrity: sha512-zHXBLhP+QehSSbsS9Pt23Gg964240DPd6QCf8WpkqEXxQ7fhdZzYsocOr5u7apWonsS5EjZDmTF+/slGMyasvw==}
+  es-abstract@1.24.2:
+    resolution: {integrity: sha512-2FpH9Q5i2RRwyEP1AylXe6nYLR5OhaJTZwmlcP0dL/+JCbgg7yyEo/sEK6HeGZRf3dFpWwThaRHVApXSkW3xeg==}
     engines: {node: '>= 0.4'}
 
   es-define-property@1.0.1:
@@ -2699,6 +2724,9 @@ packages:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
 
+  rate-limiter-flexible@4.0.1:
+    resolution: {integrity: sha512-2/dGHpDFpeA0+755oUkW+EKyklqLS9lu0go9pDsbhqQjZcxfRyJ6LA4JI0+HAdZ2bemD/oOjUeZQB2lCZqXQfQ==}
+
   raw-body@2.5.3:
     resolution: {integrity: sha512-s4VSOf6yN0rvbRZGxs8Om5CWj6seneMwK3oDb4lWDH0UPhWcxwOWw5+qk24bxq87szX1ydrwylIOp2uG1ojUpA==}
     engines: {node: '>= 0.8'}
@@ -3251,6 +3279,10 @@ packages:
     resolution: {integrity: sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==}
     engines: {node: '>=0.10.0'}
 
+  uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+
   valid-url@1.0.9:
     resolution: {integrity: sha512-QQDsV8OnSf5Uc30CKSwG9lnhMPe6exHtTXLRYX8uMwKENy640pU+2BgBL0LRbDh/eYRahNCS7aewCx0wf3NYVA==}
 
@@ -3506,6 +3538,13 @@ snapshots:
 
   '@adonisjs/ioc-transformer@2.3.4': {}
 
+  '@adonisjs/limiter@2.1.0(@adonisjs/core@5.9.0)(@adonisjs/lucid@18.4.2(@adonisjs/application@5.3.0)(@adonisjs/core@5.9.0)(mysql2@3.20.0(@types/node@25.5.2)))':
+    dependencies:
+      '@adonisjs/core': 5.9.0
+      rate-limiter-flexible: 4.0.1
+    optionalDependencies:
+      '@adonisjs/lucid': 18.4.2(@adonisjs/application@5.3.0)(@adonisjs/core@5.9.0)(mysql2@3.20.0(@types/node@25.5.2))
+
   '@adonisjs/logger@4.1.6':
     dependencies:
       '@poppinss/utils': 5.0.0
@@ -3628,27 +3667,27 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.2': {}
 
-  '@eslint/config-array@0.23.4':
+  '@eslint/config-array@0.23.5':
     dependencies:
-      '@eslint/object-schema': 3.0.4
+      '@eslint/object-schema': 3.0.5
       debug: 4.4.3
       minimatch: 10.2.5
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/config-helpers@0.5.4':
+  '@eslint/config-helpers@0.5.5':
     dependencies:
-      '@eslint/core': 1.2.0
+      '@eslint/core': 1.2.1
 
-  '@eslint/core@1.2.0':
+  '@eslint/core@1.2.1':
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/object-schema@3.0.4': {}
+  '@eslint/object-schema@3.0.5': {}
 
-  '@eslint/plugin-kit@0.7.0':
+  '@eslint/plugin-kit@0.7.1':
     dependencies:
-      '@eslint/core': 1.2.0
+      '@eslint/core': 1.2.1
       levn: 0.4.1
 
   '@faker-js/faker@8.4.1': {}
@@ -4012,6 +4051,10 @@ snapshots:
       '@types/cookiejar': 2.1.5
       '@types/node': 25.5.2
 
+  '@types/uuid@11.0.0':
+    dependencies:
+      uuid: 9.0.1
+
   '@types/validator@13.15.10': {}
 
   '@types/yargs-parser@21.0.3': {}
@@ -4244,7 +4287,7 @@ snapshots:
       array-buffer-byte-length: 1.0.2
       call-bind: 1.0.8
       define-properties: 1.2.1
-      es-abstract: 1.24.1
+      es-abstract: 1.24.2
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
       is-array-buffer: 3.0.5
@@ -4770,7 +4813,7 @@ snapshots:
 
   error-stack-parser-es@1.0.5: {}
 
-  es-abstract@1.24.1:
+  es-abstract@1.24.2:
     dependencies:
       array-buffer-byte-length: 1.0.2
       arraybuffer.prototype.slice: 1.0.4
@@ -4902,10 +4945,10 @@ snapshots:
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.2.0)
       '@eslint-community/regexpp': 4.12.2
-      '@eslint/config-array': 0.23.4
-      '@eslint/config-helpers': 0.5.4
-      '@eslint/core': 1.2.0
-      '@eslint/plugin-kit': 0.7.0
+      '@eslint/config-array': 0.23.5
+      '@eslint/config-helpers': 0.5.5
+      '@eslint/core': 1.2.1
+      '@eslint/plugin-kit': 0.7.1
       '@humanfs/node': 0.16.7
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
@@ -6301,6 +6344,8 @@ snapshots:
 
   range-parser@1.2.1: {}
 
+  rate-limiter-flexible@4.0.1: {}
+
   raw-body@2.5.3:
     dependencies:
       bytes: 3.1.2
@@ -6353,7 +6398,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.8
       define-properties: 1.2.1
-      es-abstract: 1.24.1
+      es-abstract: 1.24.2
       es-errors: 1.3.0
       es-object-atoms: 1.1.1
       get-intrinsic: 1.3.0
@@ -6675,7 +6720,7 @@ snapshots:
       call-bound: 1.0.4
       define-data-property: 1.1.4
       define-properties: 1.2.1
-      es-abstract: 1.24.1
+      es-abstract: 1.24.2
       es-object-atoms: 1.1.1
       has-property-descriptors: 1.0.2
 
@@ -6873,7 +6918,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.8
       define-properties: 1.2.1
-      es-abstract: 1.24.1
+      es-abstract: 1.24.2
       es-errors: 1.3.0
       get-proto: 1.0.1
       math-intrinsics: 1.1.0
@@ -6928,6 +6973,8 @@ snapshots:
   urix@0.1.0: {}
 
   use@3.1.1: {}
+
+  uuid@9.0.1: {}
 
   valid-url@1.0.9: {}
 
