@@ -4,7 +4,7 @@ API sistem manajemen cuti karyawan yang dibangun menggunakan **AdonisJS v5** dan
 
 ## 📌 Fitur Utama
 
-- **Autentikasi Ganda:** Mendukung Login Tradisional (Email/Password) dan Social Auth (**Google & GitHub OAuth**).
+- **Autentikasi Ganda:** Mendukung Login Tradisional (Email/Password) dan Social Auth (**Google**).
 - **Manajemen Cuti:** Sistem pengajuan cuti dengan validasi status dan manajemen dokumen/lampiran.
 - **Role-Based Access Control (RBAC):** Perbedaan hak akses antara Admin dan Employee melalui Middleware.
 - **Secure API:** Proteksi route menggunakan API Tokens (OAT) dan Rate Limiting.
